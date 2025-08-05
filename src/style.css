@@ -72,7 +72,7 @@ body {
   padding: 24px;
 }
 
-.calculator__fields {
+.calculator__form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -83,13 +83,26 @@ body {
   flex-direction: column;
 }
 
-.calculator__field label {
+.calculator__label {
   color: var(--text-color);
   font-family: "Poppins", Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 0.2em;
   font-size: 12px;
   font-style: italic;
+}
+
+.calculator__label-error {
+  color: var(--error-input);
+}
+
+.calculator__span {
+  color: var(--error-input);
+  font-size: 10px;
+}
+
+.calculator__span-error {
+  display: none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -116,6 +129,10 @@ input::placeholder {
   font-weight: 700;
   border-radius: 8px;
   border: 1px solid var(--boder-color);
+}
+
+.calculator__input-error {
+  border-color: var(--error-input);
 }
 
 /* divisor */
@@ -175,7 +192,7 @@ hr {
 }
 
 @media (width > 767px) {
-  .calculator__fields {
+  .calculator__form {
     grid-template-columns: auto auto auto;
     justify-content: start;
     width: max-content;

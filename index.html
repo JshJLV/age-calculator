@@ -10,48 +10,59 @@
   <body>
     <div class="container">
       <main class="main__container">
-        <section class="calculator__fields">
-          <div class="calculator__field">
-            <label for="input-day">DAY</label>
-            <input
-              class="calculator__input"
-              type="number"
-              name="day"
-              id="input-day"
-              placeholder="DD"
-              maxlength="2"
-              autocomplete="off"
-            />
-          </div>
-          <div class="calculator__field">
-            <label for="input-month">MONTH</label>
-            <input
-              class="calculator__input"
-              type="number"
-              name="month"
-              id="input-month"
-              placeholder="MM"
-              maxlength="2"
-              autocomplete="off"
-            />
-          </div>
-          <div class="calculator__field">
-            <label for="input-year">YEAR</label>
-            <input
-              class="calculator__input"
-              type="number"
-              name="year"
-              id="input-year"
-              placeholder="YYYY"
-              maxlength="4"
-              autocomplete="off"
-            />
-          </div>
+        <section class="calculator__section">
+          <form class="calculator__form" novalidate>
+            <div class="calculator__field">
+              <label class="calculator__label" for="input-day">DAY</label>
+              <input
+                class="calculator__input"
+                type="number"
+                name="day"
+                id="input-day"
+                placeholder="DD"
+                maxlength="2"
+                autocomplete="off"
+              />
+              <span class="calculator__span calculator__span-error"
+                >Must be a valid day
+              </span>
+            </div>
+            <div class="calculator__field">
+              <label class="calculator__label" for="input-month">MONTH</label>
+              <input
+                class="calculator__input"
+                type="number"
+                name="month"
+                id="input-month"
+                placeholder="MM"
+                maxlength="2"
+                autocomplete="off"
+              />
+              <span class="calculator__span calculator__span-error"
+                >Must be a valid month
+              </span>
+            </div>
+            <div class="calculator__field">
+              <label class="calculator__label" for="input-year">YEAR</label>
+              <input
+                class="calculator__input"
+                type="number"
+                name="year"
+                id="input-year"
+                placeholder="YYYY"
+                maxlength="4"
+                autocomplete="off"
+              />
+              <span class="calculator__span calculator__span-error"
+                >This field is required
+              </span>
+            </div>
+          </form>
         </section>
         <section class="divisor__container">
           <hr />
           <div class="divisor__button">
-            <button class="button">
+            <button id="calculate-button" class="button">
               <img src="./src/assets/images/icon-arrow.svg" alt="icon arrow" />
             </button>
           </div>
