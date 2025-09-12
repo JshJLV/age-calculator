@@ -10,8 +10,8 @@
   <body>
     <div class="container">
       <main class="main__container">
-        <section class="calculator__section">
-          <form class="calculator__form" novalidate>
+        <form id="calculator-form" class="calculator__form" novalidate>
+          <section class="calculator__section">
             <div class="calculator__field">
               <label class="calculator__label" for="input-day">DAY</label>
               <input
@@ -20,11 +20,14 @@
                 name="day"
                 id="input-day"
                 placeholder="DD"
+                minlength="1"
                 maxlength="2"
                 autocomplete="off"
               />
-              <span class="calculator__span calculator__span-error"
-                >Must be a valid day
+              <span
+                id="error-day"
+                class="calculator__span calculator__span-error"
+              >
               </span>
             </div>
             <div class="calculator__field">
@@ -38,8 +41,10 @@
                 maxlength="2"
                 autocomplete="off"
               />
-              <span class="calculator__span calculator__span-error"
-                >Must be a valid month
+              <span
+                id="error-month"
+                class="calculator__span calculator__span-error"
+              >
               </span>
             </div>
             <div class="calculator__field">
@@ -53,23 +58,28 @@
                 maxlength="4"
                 autocomplete="off"
               />
-              <span class="calculator__span calculator__span-error"
-                >This field is required
+              <span
+                id="error-year"
+                class="calculator__span calculator__span-error"
+              >
               </span>
             </div>
-          </form>
-        </section>
-        <section class="divisor__container">
-          <hr />
-          <div class="divisor__button">
-            <button id="calculate-button" class="button">
-              <img src="./src/assets/images/icon-arrow.svg" alt="icon arrow" />
-            </button>
-          </div>
-        </section>
+          </section>
+          <section class="divisor__container">
+            <hr />
+            <div class="divisor__button">
+              <button id="calculate-button" class="button">
+                <img
+                  src="./src/assets/images/icon-arrow.svg"
+                  alt="icon arrow"
+                />
+              </button>
+            </div>
+          </section>
+        </form>
         <section class="result__section">
           <div class="date__container">
-            <span id="years-result" class="date__span">--</span>
+            <span id="year-result" class="date__span">--</span>
             <p class="date__p">years</p>
           </div>
           <div class="date__container">

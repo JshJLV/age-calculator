@@ -72,7 +72,7 @@ body {
   padding: 24px;
 }
 
-.calculator__form {
+.calculator__section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -121,6 +121,11 @@ input::placeholder {
   font-size: 16px;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid var(--bkg-button);
+}
+
 .calculator__input {
   width: 100%;
   max-width: 120px;
@@ -162,7 +167,12 @@ hr {
   padding: 12px;
   border-radius: 100%;
   background-color: var(--bkg-button);
+  transition: ease-out 0.1s;
+}
+
+.button:hover {
   cursor: pointer;
+  background-color: black;
 }
 
 /* age */
@@ -192,7 +202,7 @@ hr {
 }
 
 @media (width > 767px) {
-  .calculator__form {
+  .calculator__section {
     grid-template-columns: auto auto auto;
     justify-content: start;
     width: max-content;
