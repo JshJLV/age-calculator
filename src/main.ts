@@ -94,7 +94,6 @@ const validateForm = (data: LikeData) => {
   }
 
   if (!hasError) {
-    console.log("Todos los campos llenos");
     setValidForm();
     hasError = isValidDate(dayNum, monthNum, yearNum);
     return !hasError;
@@ -121,7 +120,7 @@ const calculateAge = (data: LikeData) => {
 
   if (
     birthday.getMonth() > currentDate.getMonth() &&
-    birthday.getDate() < currentDate.getDate()
+    birthday.getDate() <= currentDate.getDate()
   ) {
     monthResult += 12;
     yearResult -= 1;
